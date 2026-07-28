@@ -6,11 +6,15 @@ import styles from "./login.module.css";
 import logo from "../../assets/img/logo.png";
 import fondoLogin from "../../assets/img/inocuidad-alimentaria.png";
 
+import { useNavigate } from "react-router-dom";
+import { login } from "../../services/auth.service";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const error = validateLogin(email, password);
@@ -20,10 +24,23 @@ export default function Login() {
       return;
     }
 
-    console.log({
-      email,
-      password,
-    });
+    try {
+      const data = await login(email, password);
+
+      console.log(data);
+
+      localStorage.setItem("token", data.accessToken);
+
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      navigate("/dashboard");
+    } catch (error: any) {
+      console.log(error);
+      console.log(error.response);
+      console.log(error.response?.data);
+
+      alert("Correo o contraseña incorrectos");
+    }
   };
 
   return (
@@ -55,7 +72,7 @@ export default function Login() {
             </div>
 
             <button type="submit" className={styles.loginButton}>
-              <Link to="/dashboard">Ingresar</Link>
+              Ingresar
             </button>
           </form>
 

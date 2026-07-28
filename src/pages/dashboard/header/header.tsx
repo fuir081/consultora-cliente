@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useClickOutside from "@/hooks/useClickOutside";
 
 import styles from "./header.module.css";
@@ -16,6 +17,14 @@ export default function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+
+    navigate("/login");
+  };
 
   useClickOutside(notificationRef, () => {
     setShowNotifications(false);
@@ -125,7 +134,7 @@ export default function Header() {
               <ul>
                 <li>Mi perfil</li>
                 <li>Configuración</li>
-                <li>Cerrar sesión</li>
+                <li onClick={handleLogout}>Cerrar sesión</li>
               </ul>
             </div>
           )}

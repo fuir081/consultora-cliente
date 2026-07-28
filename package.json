@@ -13,11 +13,13 @@
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/raleway": "^5.2.8",
     "@fontsource/roboto-condensed": "^5.2.8",
+    "axios": "^1.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.9.36",
     "@types/node": "^25.9.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
