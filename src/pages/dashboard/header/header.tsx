@@ -7,6 +7,7 @@ import logo from "@/assets/img/imagelogo.png";
 import lupa from "@/assets/img/busqueda-de-lupa.png";
 import bell from "@/assets/img/campana.png";
 import usuario from "@/assets/img/usuario.png";
+import { adminMenu, userMenu } from "@/config/menu";
 
 export default function Header() {
   const [showNotifications, setShowNotifications] = useState(false);
@@ -20,8 +21,13 @@ export default function Header() {
 
   const navigate = useNavigate();
 
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+  const menu = user.role === "ADMIN" ? adminMenu : userMenu;
+
   const handleLogout = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
 
     navigate("/login");
   };
@@ -61,13 +67,11 @@ export default function Header() {
         )}
 
         <nav className={`${styles.menu} ${open ? styles.active : ""}`}>
-          <a href="#inicio">Panel de Control</a>
-          <a href="#servicios">Documentos</a>
-          <a href="#nosotros">Carpetas</a>
-          <a href="#contacto">Actividad</a>
-          <a href="#">Versiones</a>
-          <a href="#">Usuario</a>
-          <a href="#">Configuración</a>
+          {menu.map((item) => (
+            <a key={item.path} href={item.path} onClick={() => setOpen(false)}>
+              {item.title}
+            </a>
+          ))}
         </nav>
       </div>
       <img src={logo} alt="imagelogo consultora alimentate" />

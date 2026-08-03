@@ -53,3 +53,13 @@ font-family: 'Raleway', sans-serif;
     text-transform: capitalize;
     display: flex;
 }
+
+@media (max-width: 600px) {
+    .bienvenida {
+        text-align: center;
+    }
+
+    .bienvenida>span {
+        justify-content: center;
+    }
+}

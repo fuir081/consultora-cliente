@@ -25,9 +25,7 @@ export default function Login() {
     }
 
     try {
-      const data = await login(email, password);
-
-      console.log(data);
+      const { data } = await login(email, password);
 
       localStorage.setItem("token", data.accessToken);
 

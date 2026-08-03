@@ -19,7 +19,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 .page>div {
-    width: 55%;
+    width: 750px;
     display: flex;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
@@ -151,4 +151,27 @@ font-family: 'Raleway', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1;
+}
+
+
+@media (max-width: 800px) {
+
+    .page>div {
+        width: 80%;
+    }
+
+    .formContainer {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .formImgContainer {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .page>div {
+        width: 100%;
+    }
 }

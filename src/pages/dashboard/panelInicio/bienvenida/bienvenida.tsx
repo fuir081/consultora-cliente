@@ -2,7 +2,9 @@ import styles from "./bienvenida.module.css";
 import Calendario from "@/assets/img/calendario.png";
 
 export default function Bienvenida() {
-  const nombreUsuario = "Nombre Usuario";
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+
+  const nombreUsuario = user.representativeName ?? "Usuario";
 
   const fecha = new Date().toLocaleDateString("es-CL", {
     weekday: "long",
