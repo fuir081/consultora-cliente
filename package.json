@@ -13,10 +13,14 @@
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/raleway": "^5.2.8",
     "@fontsource/roboto-condensed": "^5.2.8",
+    "@fortune-sheet/react": "^1.0.4",
     "axios": "^1.18.1",
+    "lucide-react": "^1.33.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.18.0"
+    "react-router-dom": "^7.18.0",
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0"
   },
   "devDependencies": {
     "@types/axios": "^0.9.36",

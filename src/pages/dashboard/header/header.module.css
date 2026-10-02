@@ -9,28 +9,29 @@ font-family: 'Raleway', sans-serif;
 
 
 .header {
-    width: 94%;
-    padding: 20px 3%;
-    height: auto;
+    width: 100%;
+    padding: 0px 1%;
+    height: 55px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    border: solid 1px #e8e8e8;
+    position: fixed;
+    background-color: white;
+    z-index: 200;
 }
 
 
 
-.header>img {
-    width: 50px;
-    margin-left: 330px;
-}
+
 
 .menuContainer {
     position: relative;
 }
 
-/* Botón hamburguesa */
+/*Boton hamburguesa */
 .hamburger {
     width: 40px;
     height: 25px;
@@ -65,62 +66,36 @@ font-family: 'Raleway', sans-serif;
 }
 
 /* Menú desplegable */
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
 
-    width: 280px;
-    height: 100vh;
 
-    background: white;
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
-
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-
-    z-index: 1000;
+.logo {
+    width: 50px;
 }
 
-.active {
-    transform: translateX(0);
-}
-
-.menu a {
-    display: block;
-    padding: 12px 16px;
-    color: #333;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    background: #f5f5f5;
-}
 
 .contenedor {
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 
 }
 
-.overlay {
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.3);
-
-    z-index: 999;
-}
 
 .search {
     position: relative;
+    width: 40%;
+    margin-left: 25%;
 }
 
 .search input {
-    border-radius: 50px;
+    border-radius: 10px;
     border: solid 1px rgb(160, 160, 160);
     padding: 3px 10px 3px 20px;
+    width: 100%;
 }
 
 .search button {
@@ -130,12 +105,18 @@ font-family: 'Raleway', sans-serif;
     background-color: rgb(234, 234, 234);
     padding: 7.5px;
     margin: 0px -11px;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 10px 10px 0;
     border: solid 1px rgb(160, 160, 160);
 }
 
 .search button img {
     width: 15px;
+}
+
+.contenedorFinalHeader {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
 }
 
 .notificacion {
@@ -164,8 +145,39 @@ font-family: 'Raleway', sans-serif;
 
 .usuario div img {
     width: 25px;
-    margin: 0 10px
+    height: 25px;
+    margin: 10px 10px
 }
+
+.infoUsuario {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    position: inherit;
+}
+
+.infoUsuario h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    color: #494a4d;
+    margin-top: 5px;
+}
+
+.infoUsuario span {
+    font-size: 0.65em;
+    margin-top: -3px;
+    font-family: 'Raleway', sans-serif;
+    color: #494a4d;
+}
+
+.infoUsuario .flecha {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    height: 15px;
+    width: 15px;
+}
+
 
 .notificacion,
 .usuario {

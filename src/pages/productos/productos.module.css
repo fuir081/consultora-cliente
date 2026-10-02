@@ -1,0 +1,297 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    /* Fondo gris muy claro como en la imagen */
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Ajuste del contenido principal considerando el Sidebar */
+.mainContent {
+    flex-grow: 1;
+    padding: 30px;
+    margin-top: 60px;
+    /* Ajusta según la altura de tu Header */
+    margin-left: 80px;
+    /* Ajusta según el ancho de tu Sidebar cerrado */
+    transition: all 0.3s ease;
+}
+
+.mainContent.shifted {
+    margin-left: 250px;
+    /* Ajusta según el ancho de tu Sidebar abierto */
+}
+
+/* Cabecera de la página */
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin: 0 0 5px 0;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9333ea;
+    /* Tono morado similar al de tu interfaz */
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Contenedor del Formulario */
+.formContainer {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.inputIcon {
+    color: #9ca3af;
+}
+
+.input,
+.textarea {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+}
+
+/* Botón de envío - Inspirado en el botón "Subir Archivo" */
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #a855f7;
+    /* Color morado de tu botón */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+    background-color: #9333ea;
+}
+
+.submitBtn:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* --- NUEVOS ESTILOS PARA CRUD (TABLAS Y FILTROS) --- */
+
+.tableContainer {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.filterBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    gap: 16px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 0 12px;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.searchIcon {
+    color: #9ca3af;
+    margin-right: 8px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.filterSelect {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: white;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataTable th,
+.dataTable td {
+    padding: 14px 20px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.dataTable th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+.dataTable tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Badges para el Tipo de Producto */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badgeFINAL {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.badgeINTERMEDIO {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.badgeMATERIA_PRIMA {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Botones de Acción (Tabla) */
+.actionBtn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.actionBtn:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.deleteBtn:hover {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* Botones secundario (Cancelar/Cerrar) */
+.cancelBtn {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancelBtn:hover {
+    background-color: #f3f4f6;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.closeBtn:hover {
+    color: #4b5563;
+}

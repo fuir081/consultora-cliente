@@ -1,0 +1,711 @@
+.sheetWrapper :global(.fortune-sheet),
+.sheetWrapper :global(.fortune-cell-input),
+.sheetWrapper :global(.fortune-formula-input) {
+    font-family: Arial, sans-serif !important;
+}
+
+
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px 40px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.bienvenida h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #494a4d;
+    margin: 0 0 4px;
+}
+
+.bienvenida h3 {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 400;
+    margin: 0;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.btnPrimary,
+.btnSecondary,
+.btnDanger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.btnPrimary {
+    background-color: #a855f7;
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    background-color: #9333ea;
+}
+
+.btnSecondary {
+    background-color: #fff;
+    border-color: #e2e8f0;
+    color: #334155;
+}
+
+.btnSecondary:hover {
+    background-color: #f8fafc;
+}
+
+.btnDanger {
+    background-color: #fef2f2;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.btnDanger:hover {
+    background-color: #fee2e2;
+}
+
+/* Breadcrumb */
+.panelInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    margin-bottom: 16px;
+}
+
+.homeIcon {
+    color: #94a3b8;
+}
+
+.breadcrumbItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumbItem a {
+    color: #64748b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.breadcrumbItem a:hover {
+    color: #a855f7;
+}
+
+.breadcrumbItem:last-child a {
+    color: #a855f7;
+    font-weight: 600;
+}
+
+.separator {
+    color: #cbd5e1;
+}
+
+/* Toolbar */
+.toolbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background-color: #fff;
+    width: 280px;
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.searchIcon {
+    color: #94a3b8;
+}
+
+.toolbarActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnAction {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fff;
+    color: #334155;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+.selectType {
+    appearance: none;
+    padding-right: 32px;
+}
+
+.selectArrow {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: #94a3b8;
+    top: 13px;
+}
+
+.viewToggleContainer {
+    display: flex;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 2px;
+    background: #fff;
+}
+
+.btnToggle {
+    border: none;
+    background: transparent;
+    padding: 6px 8px;
+    color: #64748b;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnToggle.active {
+    background-color: #fdf4ff;
+    color: #a855f7;
+}
+
+/* Bulk Bar */
+.bulkActionBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.bulkButtons {
+    display: flex;
+    gap: 8px;
+}
+
+.btnBulkAction {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Titles */
+.sectionTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Grid Carpetas */
+.panelDocumentosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.folderCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.folderCard:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.folderIcon {
+    color: #f59e0b;
+    flex-shrink: 0;
+}
+
+.folderDetails h1 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.folderDetails h4 {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 2px 0 0;
+}
+
+/* Tabla */
+.tablaContainer {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.tablaDocumentos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablaDocumentos th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.thWithSort {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.tablaDocumentos td {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.rowFile {
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.rowFile:hover {
+    background-color: #f8fafc;
+}
+
+.rowSelected {
+    background-color: #fdf4ff !important;
+}
+
+.fileNameCell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.iconExcel {
+    color: #10b981;
+}
+
+.iconText {
+    color: #3b82f6;
+}
+
+.iconDefault {
+    color: #8b5cf6;
+}
+
+.badgeType {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.actionCell {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.btnIconAction {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnIconAction:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modalContent {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.fileIconWrapper {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.infoRow span {
+    color: #64748b;
+}
+
+.modalFooter {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.folderListItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.folderListItem:hover {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+}
+
+/* Alineación horizontal del contenido */
+.folderListItem .folderDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.folderName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.folderDate {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Layout vertical para contenedor en modo Lista */
+.panelDocumentosList {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Subtítulo del Modal */
+.modalSubtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 4px 0 0;
+}
+
+/* Zona Drag & Drop */
+.dropZone {
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropZone:hover {
+    border-color: #a855f7;
+    background-color: #fdf4ff;
+}
+
+.dropIcon {
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.dropText {
+    font-size: 14px;
+    color: #334155;
+    margin: 0 0 4px;
+}
+
+.browseLabel {
+    color: #a855f7;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.dropHint {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Caja de archivo seleccionado */
+.selectedFileBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 12px;
+}
+
+.selectedFileInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.selectedFileDetails {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.selectedFileName {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selectedFileSize {
+    font-size: 11px;
+    color: #64748b;
+}
+
+.removeFileBtn {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.removeFileBtn:hover {
+    background: #f1f5f9;
+    color: #ef4444;
+}
+
+/* Deshabilitar botones en estado disabled */
+.btnPrimary:disabled,
+.btnSecondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estilos para el overlay y contenedor de ExcelEditor */
+.editorOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.editorContainer {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 90vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.editorHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.editorTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.editorTitle strong {
+    color: #0f172a;
+}
+
+.editorActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sheetWrapper {
+    flex: 1;
+    width: 100%;
+    height: calc(100% - 60px);
+    position: relative;
+}
+
+/* Estado Vacío / Empty State */
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.emptyIcon {
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+.emptyState h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+}
+
+.emptyState p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0 0 20px 0;
+}

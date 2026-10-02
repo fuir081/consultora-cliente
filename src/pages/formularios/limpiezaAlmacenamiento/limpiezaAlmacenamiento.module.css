@@ -1,0 +1,247 @@
+/* src/pages/formularios/limpiezaAlmacenamiento/limpiezaAlmacenamiento.module.css */
+
+.modalOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh !important;
+    background-color: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modalContent {
+    background: #ffffff;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.modalHeader h2 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.modalHeader p {
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formGroup label {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.checkTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.checkTable th,
+.checkTable td {
+    padding: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    text-align: left;
+}
+
+.checkTable th {
+    color: #475569;
+    font-weight: 600;
+    background-color: #f8fafc;
+}
+
+.center {
+    text-align: center;
+}
+
+.addBtnContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 6px;
+}
+
+.btnAdd {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btnAdd:hover {
+    background-color: #dcfce7;
+}
+
+.queueContainer {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+.queueContainer h3 {
+    font-size: 13px;
+    color: #475569;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.queueList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+.queueItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+.queueInfo {
+    font-size: 13px;
+    color: #475569;
+}
+
+.queueInfo strong {
+    color: #0f172a;
+}
+
+.badgeDia {
+    margin-left: 8px;
+    padding: 2px 6px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.btnDelete {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.btnDelete:hover {
+    background-color: #fee2e2;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btnPrimary,
+.btnSecondary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btnPrimary {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btnPrimary:hover {
+    background-color: #d97706;
+}
+
+.btnSecondary {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btnSecondary:hover {
+    background-color: #e2e8f0;
+}

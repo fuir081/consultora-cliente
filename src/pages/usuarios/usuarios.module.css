@@ -1,0 +1,558 @@
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px 40px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Header de la vista */
+.bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.bienvenida h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 4px;
+}
+
+.bienvenida h3 {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 400;
+    margin: 0;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+}
+
+.btnPrimary,
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.btnPrimary {
+    background-color: #f97316;
+    /* Naranja según captura */
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    background-color: #ea580c;
+}
+
+.btnSecondary {
+    background-color: #fff;
+    border-color: #e2e8f0;
+    color: #334155;
+}
+
+.btnSecondary:hover {
+    background-color: #f8fafc;
+}
+
+/* Card contenedora de la vista de usuarios */
+.cardContainer {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    padding: 20px;
+}
+
+/* Toolbar / Barra de búsqueda y filtros */
+.toolbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 14px;
+    background-color: #fff;
+    width: 300px;
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+.searchIcon {
+    color: #94a3b8;
+}
+
+.toolbarActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filterIcon {
+    position: absolute;
+    left: 12px;
+    color: #64748b;
+    pointer-events: none;
+}
+
+.selectRole {
+    appearance: none;
+    padding: 8px 36px 8px 34px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fff;
+    color: #334155;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Tabla */
+.tablaContainer {
+    overflow-x: auto;
+}
+
+.tablaUsuarios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablaUsuarios th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tablaUsuarios td {
+    padding: 16px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+/* Celdas especiales */
+.userCell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.userSubtext {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.emailCell {
+    color: #475569;
+}
+
+.accesoCell {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Badges de Roles */
+.badgeRol {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dotRol {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.rolAdministrador {
+    background-color: #f3e8ff;
+    color: #9333ea;
+}
+
+.rolAdministrador .dotRol {
+    background-color: #9333ea;
+}
+
+.rolEditor {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+.rolViewer {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* Badges de Estado */
+.badgeEstado {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dotEstado {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.estadoActivo {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.estadoActivo .dotEstado {
+    background-color: #16a34a;
+}
+
+.estadoInactivo {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.estadoInactivo .dotEstado {
+    background-color: #dc2626;
+}
+
+/* Botones de acción */
+.actionCell {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.btnIconAction {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.btnIconAction:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* Paginación */
+.paginationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 12px;
+}
+
+.paginationText {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.paginationControls {
+    display: flex;
+    gap: 6px;
+}
+
+.btnPag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    border-radius: 6px;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btnPag:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btnPagActive {
+    background-color: #ffedd5;
+    color: #ea580c;
+    border-color: #fed7aa;
+    font-weight: 600;
+}
+
+/* MODAL */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.modalCloseBtn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.modalHeader {
+    margin-bottom: 20px;
+}
+
+.modalHeader h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px;
+}
+
+.modalSubtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.formGroup label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.formGroup input,
+.formGroup select {
+    padding: 9px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    color: #0f172a;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+    border-color: #f97316;
+}
+
+.formRow {
+    display: flex;
+    gap: 12px;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* Badges de Roles */
+.badgeRol {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dotRol {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.rolSYSADMIN {
+    background-color: #fce7f3;
+    /* Rosa claro */
+    color: #db2777;
+    /* Rosa oscuro */
+}
+
+.rolSYSADMIN .dotRol {
+    background-color: #db2777;
+}
+
+.rolADMIN {
+    background-color: #f3e8ff;
+    /* Morado claro */
+    color: #9333ea;
+    /* Morado oscuro */
+}
+
+.rolADMIN .dotRol {
+    background-color: #9333ea;
+}
+
+.rolUSER {
+    background-color: #e0f2fe;
+    /* Azul claro */
+    color: #0284c7;
+    /* Azul oscuro */
+}
+
+.rolUSER .dotRol {
+    background-color: #0284c7;
+}
+
+.rolGUEST {
+    background-color: #f1f5f9;
+    /* Gris claro */
+    color: #475569;
+    /* Gris oscuro */
+}
+
+.rolGUEST .dotRol {
+    background-color: #475569;
+}
+
+/* Tabs / Pestañas */
+.tabsContainer {
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 24px;
+}
+
+.tabBtn {
+    background: none;
+    border: none;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.tabBtn:hover {
+    color: #0f172a;
+}
+
+.tabBtnActive {
+    color: #f97316;
+    /* Naranja principal */
+    font-weight: 600;
+}
+
+.tabBtnActive::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #f97316;
+}
+
+/* Modal Empresas */
+.modalFormEmpresa {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

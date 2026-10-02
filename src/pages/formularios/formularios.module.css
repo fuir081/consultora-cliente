@@ -1,0 +1,307 @@
+/* formularios.module.css */
+
+.mainContainer {
+    padding: 30px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, sans-serif;
+    width: 100%;
+}
+
+.bienvenida {
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+.bienvenida h1 {
+    font-size: 24px;
+    color: #334155;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.bienvenida h1 span {
+    color: #f59e0b;
+}
+
+.bienvenida h3 {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.fechaActual {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Contenedor de filas */
+.listaContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 900px;
+    margin-left: 10%;
+}
+
+.rowCard {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rowCard:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.rowLeft {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.rowIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f1f5f9;
+}
+
+.rowCard h4 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    color: #334155;
+    font-weight: 600;
+}
+
+.subCategoria {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.rowRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.badgeStatus {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.badgePending {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.badgeCompleted {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.arrowIcon {
+    color: #94a3b8;
+}
+
+/* Colores de íconos */
+.textGreen {
+    color: #10b981;
+}
+
+.textBlue {
+    color: #3b82f6;
+}
+
+.textOrange {
+    color: #f59e0b;
+}
+
+.textPurple {
+    color: #8b5cf6;
+}
+
+/* Ventana Modal */
+.modalOverlay {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh !important;
+    background-color: rgba(15, 23, 42, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modalContent {
+    background: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.modalHeader h2 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #334155;
+}
+
+.modalHeader p {
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formGroup label {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #3b82f6;
+}
+
+.checkTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.checkTable th,
+.checkTable td {
+    padding: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btnPrimary,
+.btnSecondary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.btnPrimary {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btnSecondary {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* ...tu código css existente... */
+
+/* --- NUEVAS CLASES PARA LA AGRUPACIÓN --- */
+.categoriaGroup {
+    margin-bottom: 30px;
+}
+
+.categoriaTitulo {
+    font-size: 16px;
+    color: #475569;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.categoriaForms {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
